@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117844898-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-117844898-1');
+    </script>	
+     
+      </head>
+      <body>
+
+
+  </head>
+  <body>
+    <a-scene altspace="fullspace:true;">
+        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
+            <a-cursor></a-cursor>
+        
+        </a-entity>
+
+        <a-entity id="billboard" geometry="" material="src:billboard.png" position="10.098 31.371 -65.836" rotation="12.948846169956605 -65.20259708588767 5.901465289847479" scale="28.406 28.406 0.137"></a-entity>
+
+  <a-assets>
+      <a-mixin id="temp" material="color:#f7ece1;src:stucco512.jpg;"></a-mixin>
+      <a-mixin id="temp2" material="color:#f7ece1;src:stucco.jpg;"></a-mixin>   
+      <a-mixin id="temp_dark" material="color:#160002;src:stucco512.jpg;"></a-mixin>     
+      <a-mixin id="blue" material="color:#f7c260"></a-mixin>
+      <a-mixin id="hills512" material="src:hills512.jpg;"></a-mixin> 
+      <!--    
+      <a-mixin id="texture2" material="src:texture2.jpg;"></a-mixin>   
+      <a-mixin id="texture3" material="src:texture3.jpg;"></a-mixin> 
+      -->
+      
+      <img id="sky" src="sky1024.jpg">  
+      <img id="desert" src="cracked.jpg">  
+  </a-assets>
+  <a-entity id="root" position="53.792 0 -154.487">
+      <a-entity id="fan" position="-68.603 4.821 104.698" rotation="-73.79696401285004 85.08423257692725 -41.883214824063174" scale="0.516 0.516 0.516">
+          <a-entity id="main">
+                  <a-entity id="darkback" material="opacity:0.5;color:#000000" position="-0.014 -0.132 0" scale="0.496 0.082 0.496" geometry="primitive:cylinder"></a-entity>
+                  <a-entity rotation="0 183.0732760831342 0">
+                         <a-entity id="start" geometry="" material="color:#000000" rotation="0 16.55848027928079 0" scale="0.204 0.09 1"></a-entity>
+                         <a-entity id="start-2" geometry="" material="color:#000000" rotation="0 106.51285411482004 0" scale="0.204 0.09 1"></a-entity>
+                         <a-animation attribute="rotation" dur="1000" fill="none" easing="linear" to="0 360 0" repeat="indefinite" direction="normal"></a-animation>
+                       </a-entity>
+                  </a-entity>
+        </a-entity>
+    <a-entity id="pipes">
+        <a-entity id="main">
+            <a-entity geometry="arc:90;primitive:torus" id="start" material="side:double;src:stucco_shade.jpg"position="-68.329 5.367 105.009" rotation="0 -47.09713075975367 179.96604345059157" scale="0.706 0.706 0.706">
+                
+            </a-entity>
+            <a-entity n-sound="src:sweep.wav;autoplay:true;loop:true;maxDistance:.1;volume:.2;" geometry="" id="st" n-object="res:effects/steam" material="opacity:0;color:#ffffff" position="-68.855 5.214 104.508" scale="0.832 1.944 0.832"></a-entity>
+        </a-entity>
+    </a-entity>
+      <a-entity id="boiler" position="-125.054 0 25.894">
+        <a-entity id="main">
+          <!--smoke-->
+          <a-entity scale="1.44 15.905 1.44" geometry="primitive:cylinder;openEnded:true" material="side:double" id="smoke" mixin="temp" position="1 10.485 1" rotation="0 133.442 0" altspace-cursor-collider="enabled:false"></a-entity>
+          <a-entity scale="1.435 15.845 1.435" geometry="primitive:cylinder;openEnded:true" material="side:double" id="smoke-2" mixin="temp_dark" position="1 10.485 1" rotation="0 133.442 0" n-mesh-collider="type:environment;convex:false" altspace-cursor-collider="enabled:false" n-object="res:effects/smoke"></a-entity>
+          <a-entity scale="0.309 20.452 0.309" geometry="primitive:cylinder;openEnded:true;segmentsHeight:1;segmentsRadial:3" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="scaff" position="-0.643 9.488 1" rotation="0 133.442 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+          <a-entity scale="0.309 20.452 0.309" geometry="primitive:cylinder;openEnded:true;segmentsHeight:1;segmentsRadial:3" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="scaff-2" position="2.128 9.488 2.189" rotation="0 42.97183463481174 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+          <a-entity scale="0.309 20.452 0.309" geometry="primitive:cylinder;openEnded:true;segmentsHeight:1;segmentsRadial:3" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="scaff-3" position="1.779 9.488 -0.456" rotation="0 154.2975342287307 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+    
+          <a-entity scale="2.207 2.207 2.207" geometry="primitive:ring" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="ring" position="1.187 9.488 1.05" rotation="-90 37.52873558106892 148.05229426180472" n-mesh-collider="type:environment;convex:false" altspace-cursor-collider="enabled:false"></a-entity>
+          <a-entity scale="2.207 2.207 2.207" geometry="primitive:ring;radiusInner:0.51" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="ring-3" position="1.187 18.582 1.05" rotation="-90 37.52873558106892 148.05229426180472" n-mesh-collider="type:environment;convex:false" altspace-cursor-collider="enabled:false"></a-entity>
+          <a-entity scale="2.207 2.207 2.207" geometry="primitive:ring" material="repeat:1 10;side:double;transparent:true;src:catwalk.png" id="ring-2" position="1.187 3.171 1.05" rotation="-90 37.52873558106892 148.05229426180472" n-mesh-collider="type:environment;convex:false" altspace-cursor-collider="enabled:false"></a-entity>
+           
+    
+          <a-entity id="portal" position="1 -6.575 1" rotation="0 133.442 0" n-portal="" scale="1.19 3.521 1.664"></a-entity>
+          <!-- -->
+          <a-entity geometry="primitive:tetrahedron" material="color:#ff0c00;src:btn1.png" id="crystal-steam" position="2.654 0.029 1" rotation="27.445 125.077 -33.289" scale="0.403 1.102 0.678" n-object="res:effects/steam" material.color="#ff0c00">
+      
+          </a-entity><a-entity geometry="primitive:dodecahedron" material="color:#fe0204;src:btn1.png" id="crystal-steam-3" position="0.268 0.029 1.971" rotation="54.31639897840204 -150.9743790169719 73.16671043820612" scale="0.403 1.102 0.678" n-object="res:effects/steam" material.color="#fe0204">
+    
+          </a-entity><a-entity geometry="primitive:dodecahedron" material="color:#ff0100;src:btn1.png" id="steam-4" position="1.565 0.029 1.861" rotation="54.31639897840204 -150.9743790169719 73.16671043820612" scale="0.403 1.102 0.678" n-object="res:effects/steam" material.color="#ff0100">
+   
+          </a-entity><a-entity geometry="primitive:dodecahedron" material="color:#f4a23f;src:btn1.png" id="steam-5" position="2.136 0.029 -0.019" rotation="54.31639897840204 -150.9743790169719 73.16671043820612" scale="0.403 1.102 0.678" n-object="res:effects/steam" material.color="#f4a23f">
+
+          </a-entity><a-entity geometry="primitive:dodecahedron" material="color:#ff0500;src:btn1.png" id="steam-3" position="0.552 0.029 0.106" rotation="27.445 125.077 -33.289" scale="0.403 1.102 0.678" n-object="res:effects/steam" material.color="#ff0500">
+          
+          </a-entity><a-entity geometry="primitive:tetrahedron" material="color:#f68a35;src:btn1.png" id="crystal-steam-2" position="0.961 0.029 2.671" rotation="-7.16197243913529 120.95139055211679 -55.51961034817677" scale="0.195 0.534 0.328" n-object="res:effects/steam" material.color="#f68a35">
+           
+          </a-entity>
+         
+          <!--main crystal-->
+          <a-entity n-sound="src:sweep.wav;autoplay:true;loop:true;maxDistance:.1;" geometry="primitive:octahedron" material="color:#ff0200;src:btn1.png" id="crystal" position="1 0.465 1" rotation="0 133.442 0" scale="1.109 3.031 1.432" n-object="res:effects/smoke" material.color="#ff0200">
+            <a-animation attribute="material.color" from="orange" to="red" dur="2000" repeat="indefinite" direction="alternate" easing="ease-in-out"></a-animation>
+          </a-entity>
+                <a-entity geometry="" material="opacity:0;color:#000000" id="fsmoke" position="1 1.227 1" rotation="0 133.442 0" n-object="res:effects/smoke" scale="2.35 2.35 2.35"></a-entity>
+    
+          </a-entity>
+       </a-entity>
+       <a-entity id="buildings">
+        <a-entity scale="15.435 7.955 7.955" geometry="" id="station_cube" mixin="temp" position="-83.245 2.684 106.27" rotation="0 133.44187048596874 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="2.583 5.702 4.298" geometry="" id="station_cube-2" mixin="temp" position="-68.153 2.684 106.503" rotation="0 133.44187048596874 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1 3.466 1" geometry="primitive:cylinder" id="station_cube-4" mixin="temp" position="-68.153 5.744 106.503" rotation="46.52417296462285 -137.39527927237143 88.69386668625144" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="0.903 3.813 0.903" geometry="primitive:cylinder" id="station_cube-5" mixin="temp" position="-68.153 5.744 106.503" rotation="46.52417296462285 -137.39527927237143 88.69386668625144" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="3.038 4.465 3.366" geometry="" id="station_cube-3" mixin="temp" position="-67.216 3.743 96.612" rotation="0 133.442 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1.531 2.998 0.613" geometry="" id="station_cube-6" mixin="temp" position="-87.892 5.093 92.928" rotation="0 132.1813633366809 -32.02834074781302" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1.531 2.998 0.613" geometry="" id="station_cube-7" mixin="temp" position="-88.525 5.093 93.5" rotation="0 132.1813633366809 -32.02834074781302" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1.531 2.998 0.412" geometry="" id="station_cube-8" mixin="temp" position="-89.851 5.093 83.221" rotation="-1.6615776058793874 -139.57251889386853 -33.46073523564007" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1.44 1.44 1.44" geometry="primitive:sphere" id="station_sphere" mixin="temp" position="-67.216 6.04 96.612" rotation="0 133.442 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+       
+        <a-entity scale="7.508 7.605 7.508" geometry="primitive:cone;radiusTop:0.75;segmentsRadial:4" id="station_trap" mixin="temp" position="-90.431 5.929 89.036" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity><a-entity scale="1.951 0.816 1.951" geometry="primitive:cone;radiusTop:0.75;segmentsRadial:4" id="station_trap-2" mixin="temp" position="-84.988 4.898 89.066" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity scale="1.124 14.026 1.124" geometry="primitive:cylinder" id="station_cyl" mixin="temp" position="-84.929 6.485 107.967" rotation="0 -46.3522856260836 90.01166961505233" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity scale="1.124 14.026 1.124" geometry="primitive:cylinder" id="station_cyl-2" mixin="temp" position="-81.416 6.485 104.615" rotation="0 -46.3522856260836 90.01166961505233" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity scale="1.124 14.026 1.124" geometry="primitive:cylinder" id="station_cyl-3" mixin="temp" position="-83.158 6.485 106.294" rotation="0 -46.3522856260836 90.01166961505233" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+      </a-entity>
+      <a-entity id="hills" position="-68.321 0 122.058">
+        <a-entity position="-22.726 -0.207 -27.567" scale="55.789 4.249 65.685" geometry="primitive:dodecahedron" id="hill" material="src:hills512s.jpg" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="0.739 2.374 -26.221" scale="4.107 1.843 4.835" geometry="primitive:dodecahedron" id="hill-10" material="src:hills512s.jpg" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="0.34 2.656 -14.884" scale="4.107 1.843 5.892" geometry="primitive:dodecahedron" id="hill-11" material="src:hills512s.jpg" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-77.689 -0.207 -45.999" scale="55.789 12.337 65.685" geometry="primitive:dodecahedron" id="hill-5" material="src:hills512s.jpg" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="56.719 -0.207 -46.427" scale="55.789 33.889 36.966" geometry="primitive:dodecahedron" id="hill-2" material="src:hills512s.jpg" rotation="0 19.537860813961075 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-81.414 -0.207 5.241" scale="26.702 13.282 11.935" geometry="primitive:dodecahedron" id="hill-4" material="src:hills512s.jpg" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-72.953 12.82 -25.007" scale="26.702 11.467 11.935" geometry="primitive:dodecahedron" id="hill-6" material="src:hills512s.jpg" rotation="7.735 -16.387 24.637" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-15.814 -27.49 3.496" scale="59.295 25.111 26.503" geometry="primitive:dodecahedron" id="hill-8" material="src:hills512s.jpg" rotation="0.917 96.028 35.065" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-20.794 -5.689 -29.001" scale="24.684 22.312 11.453" geometry="primitive:dodecahedron" id="hill-9" material="src:hills512s.jpg" rotation="-75.22935850067708 35.29420018005871 95.05369821220357" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <a-entity position="-43.758 12.82 -104.82" scale="26.702 11.467 11.935" geometry="primitive:dodecahedron" id="hill-7" material="src:hills512s.jpg" rotation="7.735 -16.387 24.637" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+        <!--shadow-->
+        <a-entity position="-55.139 -0.564 -102.035" scale="34.203 0.989 20.374" geometry="primitive:dodecahedron" id="hill-shadow" material="opacity:0.2;color:black" rotation="0.057 -18.105 0.229"  altspace-cursor-collider="enabled:false"></a-entity>
+        
+        <a-entity position="-12.056 -0.207 -85.843" scale="55.789 33.889 36.966" geometry="primitive:dodecahedron" id="hill-3" material="src:hills512s.jpg" rotation="0 19.82433971152648 0" n-mesh-collider="type:environment" altspace-cursor-collider="enabled:false"></a-entity>
+      </a-entity>
+  </a-entity>
+<!-- Textured plane parallel to ground. -->
+<a-plane material="src:cracked.jpg;repeat: 4000 4000;" height="4000" width="4000" rotation="-90 0 0" altspace-cursor-collider="enabled: false"></a-plane>
+
+     <a-sky src="#sky" radius="2500"></a-sky> 
+    </a-scene>
+
+  </body>
+</html>

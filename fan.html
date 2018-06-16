@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+  </head>
+  <body>
+    <a-scene altspace="fullspace:true;">
+            <a-assets>
+                    <a-mixin id="temp" material="color:#f7ece1;src:stucco_shade.jpg;"></a-mixin>
+                    <a-mixin id="temp_dark" material="color:#160002;src:stucco_shade.jpg;"></a-mixin>     
+                    <a-mixin id="blue" material="color:#f7c260"></a-mixin>
+                    <a-mixin id="red"  material="color:#FF0000;src:btn1.png"></a-mixin>
+                   
+                    <a-mixin id="texture1" material="src:texture1.jpg;"></a-mixin>     
+                    <a-mixin id="texture2" material="src:texture2.jpg;"></a-mixin>   
+                    <a-mixin id="texture3" material="src:texture3.jpg;"></a-mixin> 
+                
+                    
+                    <img id="sky" src="sky.jpg">  
+                    <img id="desert" src="cracked.jpg">  
+                </a-assets>
+
+  <a-entity id="fan">
+        <a-entity id="main">
+                <a-entity id="darkback" material="opacity:0.5;color:#000000" position="-0.014 -0.132 0" scale="0.496 0.082 0.496" geometry="primitive:cylinder"></a-entity>
+                <a-entity rotation="0 183.0732760831342 0">
+                       <a-entity id="start" geometry="" material="color:#000000" rotation="0 16.55848027928079 0" scale="0.204 0.09 1"></a-entity>
+                       <a-entity id="start-2" geometry="" material="color:#000000" rotation="0 106.51285411482004 0" scale="0.204 0.09 1"></a-entity>
+                       <a-animation attribute="rotation" dur="10000" fill="none" easing="linear" to="0 360 0" repeat="indefinite" direction="normal"></a-animation>
+                     </a-entity>
+                </a-entity>
+      </a-entity>
+
+    </a-entity>
+     </a-entity>
+
+     <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
+            <a-cursor></a-cursor>
+          
+          
+          
+          
+          </a-entity>
+              
+              </a-scene>
+
+            </body>
+            </html>
